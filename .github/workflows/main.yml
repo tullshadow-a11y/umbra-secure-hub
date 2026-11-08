@@ -1,14 +1,8 @@
-name: Deploy Vite React App to GitHub Pages
+name: Deploy Vite React to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
-  workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+    branches: [ main ]
 
 jobs:
   build-and-deploy:
@@ -36,5 +30,4 @@ jobs:
           path: './dist'
 
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v4
