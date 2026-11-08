@@ -5,9 +5,8 @@ export default defineConfig({
   base: '/umbra-secure-hub/',
   plugins: [react()],
   resolve: {
-    alias: [
-      { find: '@', replacement: '/src' },
-      { find: '~', replacement: '/' }
-    ]
+    alias: {
+      '@': '/'
+    }
   }
 })
